@@ -9,13 +9,12 @@ export default class form extends Component {
        inputData:'',
        todo: [
         'first item',
-       ],
+       ]  
     }
   }
 
   ChangeInputData=(event)=>{
     this.setState({inputData:event.target.value})
-    console.log(this.state.inputData)
   }
 
   addTodo=(event)=>{
@@ -30,11 +29,11 @@ export default class form extends Component {
 
   removeTodo=(index)=>{
     let original=[...this.state.todo];
-    let selected=original.filter((value,key)=>{
+    let left=original.filter((value,key)=>{
         return index!==key
     })
     this.setState({
-      original:selected
+      original: left
     })
   }
 
